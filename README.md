@@ -74,7 +74,7 @@ You need to clone the project to a local directory, say `~/tools/xsl`.
 For example, the default download steps (for a Unix-like operating system) would be
 
 	cd ~/tools/xsl
-	git clone https://github.com/flatpack/xml-editor.git
+	git clone https://github.com/bbutler-tssg/xml-editor.git
 
 It may be convenient to create a variable containing where this project can be found in the local file system, for example
 
