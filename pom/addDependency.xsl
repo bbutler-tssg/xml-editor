@@ -18,6 +18,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
   <xsl:param name="artifactId"/>
   <xsl:param name="version"/>
   <xsl:param name="scope"/>
+  <xsl:param name="type"/>
+  <xsl:param name="classifier"/>
   <xsl:param name="extraXML"/>
 
   <!-- See http://www.daniweb.com/software-development/xml-xslt-and-xpath/threads/167809/adding-new-element-using-xslt -->
@@ -34,6 +36,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         <xsl:element name="version"><xsl:value-of select="$version"/></xsl:element>
         <xsl:if test="$scope != ''">
           <xsl:element name="scope"><xsl:value-of select="$scope"/></xsl:element>
+        </xsl:if>
+        <xsl:if test="$type != ''">
+          <xsl:element name="type"><xsl:value-of select="$type"/></xsl:element>
+        </xsl:if>
+        <xsl:if test="$classifier != ''">
+          <xsl:element name="classifier"><xsl:value-of select="$classifier"/></xsl:element>
         </xsl:if>
         <xsl:if test="$extraXML != ''">
           <xsl:copy-of select="document($extraXML)/*"/>
